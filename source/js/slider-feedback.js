@@ -2,12 +2,15 @@
 
 (function () {
   var mySlider = new Swiper('.slider-js', {
-    // autoHeight: true,
     slidesPerView: 1,
-    // spaceBetween: 50,
+    effect: 'fade',
     updateOnWindowResize: true,
     loop: true,
-    
+
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: '.swiper-pagination',
       type: 'fraction',

@@ -40,7 +40,7 @@
             </ul>
           </div>
   
-          <a class="feedback-link" href="#">Обратная связь</a>
+          <a class="feedback-link js-feedback" href="#">Обратная связь</a>
         </div>
       </div>
     </header>
@@ -100,16 +100,16 @@
 
           <!-- Add Arrows -->
           <button type="button" class="slider__button slider__button--prev swiper-button-prev">
-            <div class="slider__button-wrapper">
-              <div class="slider__button-arrow">
-              </div>
-            </div>
+            <span class="slider__button-wrapper">
+              <span class="slider__button-arrow">
+              </span>
+            </span>
           </button>
           <button type="button" class="slider__button slider__button--next swiper-button-next">
-            <div  class="slider__button-wrapper">
-              <div class="slider__button-arrow">
-              </div>
-            </div>
+            <span class="slider__button-wrapper">
+              <span class="slider__button-arrow">
+              </span>
+            </span>
           </button>
         </div>
       </section>
@@ -335,6 +335,44 @@
       </div>
     </footer>
   </div>
+
+  <div class="overlay"></div>
+
+  <section class="modal-form modal-form-js">
+    <div class="modal-form__container">
+      <h2 class="modal-form__header">Обратная связь</h2>
+
+      <section class="form">
+        <h2 class="visually-hidden">Форма заказа</h2>
+
+        <form class="js-form" action="POST">
+          <label class="form__label"  for="name">Ваше имя<sup>*</sup></label>
+          <div class="form__input-wrapper">
+            <input type="text" id="name" required autofocus>
+          </div>
+
+          <label class="form__label" for="phone">Телефон<sup>*</sup></label>
+          <div class="form__input-wrapper">
+            <input type="tel" class="js-phone-mask non-empty" id="phone"
+            pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" aria-label="Введите Ваш номер телефона" required>
+          </div>
+
+          <label class="form__label"  for="email">Email<sup>*</sup></label>
+          <div class="form__input-wrapper">
+            <input type="email" id="email" required>
+          </div>
+
+          <label class="form__label"  for="message">Сообщение</label>
+          <div class="form__input-wrapper">
+            <textarea name="message" id="message" rows="10"></textarea>
+          </div>
+
+          <button class="form__button" type="submit">Отправить</button>
+          <button class="modal-form__button modal-button-js" type="button" title="Закрыть"></button>
+        </form>
+      </section>
+    </div>    
+  </section>
 
 <script src="js/plugins/script.min.js"></script>
 <script src="js/script.min.js"></script>

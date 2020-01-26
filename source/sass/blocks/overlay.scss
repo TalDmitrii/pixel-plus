@@ -1,0 +1,56 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateY(-120%);
+  opacity: 0;
+
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+
+  z-index: 50;
+
+  background-color: rgba($color-black, 0.7);
+}
+
+.overlay--show {
+  animation-name: overlay-animate-show;
+}
+
+.overlay--hide {
+  animation-name: overlay-animate-hide;
+}
+
+@keyframes overlay-animate-show {
+  0% {
+    transform: translateY(0);
+  }
+
+  10% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes overlay-animate-hide {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+}
