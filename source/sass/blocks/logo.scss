@@ -1,0 +1,41 @@
+.logo {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logo__img-wrapper {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+
+  margin-right: 12px;
+
+  background-color: $color-grey;
+
+  @media (max-width: $tablet-width) {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+.logo__company-title {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  margin-right: 20px;
+  padding-top: 5px;
+
+  @media (max-width: $tablet-width) {
+    max-width: 150px;
+  }
+}
+
+.logo__name {
+  font-size: 32px;
+  line-height: 24px;
+
+  margin-bottom: 17px;
+}

@@ -1,0 +1,45 @@
+.footer-navigation {
+  @media (max-width: $tablet-width) {
+    order: 1;
+
+    margin-bottom: 30px;
+  }
+}
+
+.footer-navigation__list {
+  @include indents-zero();
+}
+
+.footer-navigation__item {
+  line-height: 26px;
+}
+
+.footer-navigation__link {
+  position: relative;
+  transition: color $transition-time;
+
+  outline: none;
+
+  text-decoration: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    transition: background-color $transition-time;
+
+    background-color: $color-text-light;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-red;
+
+    &::after {
+      background-color: $color-red;
+    }
+  }
+}

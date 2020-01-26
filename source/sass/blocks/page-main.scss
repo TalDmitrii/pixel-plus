@@ -1,0 +1,21 @@
+.page-main {
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+
+.page-main__content {
+  @include block-width();
+
+  margin-bottom: 182px;
+  padding-top: 5px;
+
+  @media (max-width: $laptop-width) {
+    padding: 10px $side-padding-tablet 0;
+
+    margin-bottom: 70px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+}

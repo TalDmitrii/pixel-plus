@@ -1,0 +1,36 @@
+.page-header {
+  background-color: $header-bg-color;
+}
+
+.page-header__content {
+  @include block-width();
+  
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+
+  margin: 0 auto;
+  padding: 35px 10px 65px;
+
+  @media (max-width: $laptop-width) {
+    padding: 40px $side-padding-tablet 65px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 20px;
+  }
+}
+
+.page-header__contacts {
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  margin-left: auto;
+  margin-bottom: 5px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 20px;
+  }
+}

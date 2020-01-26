@@ -1,0 +1,24 @@
+.copyrights {
+  margin-top: 2px;
+
+  @media (max-width: $tablet-width) {
+    order: 3;
+  }
+}
+
+.copyrights p {
+  margin: 0;
+}
+
+.copyrights a {
+  transition: color $transition-time;
+
+  text-decoration: none;
+
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: $color-red;
+  }
+}

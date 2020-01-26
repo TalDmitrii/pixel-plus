@@ -1,0 +1,56 @@
+.pagination {
+  @include indents-zero();
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  counter-reset: section;
+}
+
+.pagination__link {
+  position: relative;
+  display: block;
+
+  text-decoration: none;
+
+  margin: 4px;
+  padding: 6px;
+
+  outline: none;
+
+  &::after {
+    counter-increment: section;
+    content: counter(section);
+    display: block;
+    width: 100%;
+    transition: color $transition-time, box-shadow $transition-time;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-red;
+
+    box-shadow: 0 3px 0 0 $color-red;
+  }
+}
+
+.pagination__link--active {
+  &::after {
+    color: $color-text-dark;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      color: $color-red;
+    }
+  }
+}

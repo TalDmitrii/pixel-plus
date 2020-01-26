@@ -1,0 +1,35 @@
+.page-footer {
+  color: $color-text-light;
+
+  background-color: $footer-bg-color;
+}
+
+.page-footer__content {
+  @include block-width();
+
+  display: flex;
+
+  padding-top: 43px;
+  padding-bottom: 50px;
+
+  @media (max-width: $laptop-width) {
+    justify-content: space-between;
+
+    padding: 50px $side-padding-tablet 50px;
+  }
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.page-footer__copyrights {
+  margin-right: 160px;
+
+  @media (max-width: $laptop-width) {
+    margin-right: 30px;
+  }
+}

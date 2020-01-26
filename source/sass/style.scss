@@ -1,0 +1,28 @@
+@import "variables";
+@import "fonts";
+@import "global";
+@import "mixins";
+
+/* Плагины */
+@import "plugins/normalize";
+@import "plugins/swiper";
+
+/* Блоки */
+@import "blocks/additional-info.scss";
+@import "blocks/article.scss";
+@import "blocks/breadcrumbs.scss";
+@import "blocks/catalog.scss";
+@import "blocks/copyrights.scss";
+@import "blocks/decorate.scss";
+@import "blocks/feedback-link.scss";
+@import "blocks/footer-navigation.scss";
+@import "blocks/logo.scss";
+@import "blocks/main-navigation.scss";
+@import "blocks/pagination.scss";
+@import "blocks/page-content.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/page-header.scss";
+@import "blocks/page-main.scss";
+@import "blocks/produced.scss";
+@import "blocks/slider.scss";
+@import "blocks/tel.scss";
