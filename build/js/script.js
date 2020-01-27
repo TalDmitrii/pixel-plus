@@ -37,7 +37,36 @@
 
   if (!form) return;
 
+  var buttonSubmit = form.querySelector('.button-submit-js');
   var inputs = form.querySelectorAll('input');
+
+  // При клике по кнопке, происходит проверка полей на отсутствие значения.
+  buttonSubmit.addEventListener('click', function () {
+    var emptyInputs = [];
+
+    for (var i = 0; i < inputs.length; i++) {
+      // Если поле формы обязятельно для заполнения и не имеет никакого значения.
+      if ((inputs[i].required === true) && (inputs[i].value.length === 0)) {
+        var inputParent = inputs[i].parentElement;
+
+        if (!inputParent.classList.contains('form__input-wrapper--empty')) {
+          inputParent.classList.add('form__input-wrapper--empty');
+        }
+
+        emptyInputs.push(inputs[i]);
+      }
+    }
+
+    // Если пустые поля существуют, удаляет выделяющий класс с их родителей.
+    setTimeout(function () {
+      if (emptyInputs.length > 0) {
+        for (var i = 0; i < emptyInputs.length; i++) {
+          var inputParent = emptyInputs[i].parentElement;
+          inputParent.classList.remove('form__input-wrapper--empty');
+        }
+      }
+    }, 1000);
+  });
 
   // Обработка полей формы.
   // 
